@@ -21,6 +21,10 @@ public class Main {
     static int remainder(int num1, int num2){
         return (int) Math.IEEEremainder(num1,num2);
     }
+    static int nextup(int num1, int num2){
+        return (int) Math.nextAfter(num1,num2);
+        //returns floating point number adjacent to num1 in direction of num2
+    }
     public static void main(String[] args) {
         Scanner scannerobj = new Scanner(System.in);
         // declaring a scanner object
@@ -59,6 +63,9 @@ public class Main {
             case "Remainder":
                 System.out.println("The remainder of " + num1 + " and "  + num2 + " is " + remainder(num1,num2));
                 // calls the remainder method
+                break;
+            case "NextUp":
+                System.out.println("the result of nextup is " + nextup(num1,num2));
                 break;
             default:
                 System.out.println("an unexpected error occurred");
